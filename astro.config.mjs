@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     tunnel({
       // // The URL to expose. Defaults to http://localhost:4324.
-      url: "http://localhost:4324",
+      url: "http://localhost:4321",
       // // The local server port to expose. Defaults to 4324. Only used if `url` is not set.
       // port: 4324,
       // // The local server protocol to use. Defaults to http. Only used if `url` is not set.
