@@ -20,15 +20,15 @@ const { services, business } = SITE_DATA;
     <picture class="cs-picture">
       <source
         media="(min-width: 601px)"
-        srcset="/images/services/air-conditioner-repairs-and-servicing.png"
+        srcset={business.src}
       />
       <source
         media="(max-width: 600px)"
-        srcset="/images/services/air-conditioner-repairs-and-servicing.png"
+        srcset={business.src}
       />
       <img
         decoding="async"
-        src="/images/services/air-conditioner-repairs-and-servicing.png"
+        src={business.src}
         alt="AC Repair Service"
         width="1280"
         height="510"
@@ -36,26 +36,28 @@ const { services, business } = SITE_DATA;
     </picture>
     <ul class="cs-card-group">
       {
-        services.map((service) => (
-          <li class="cs-item" data-key={service.id}>
-            <picture class="cs-icon-picture">
-              <img
-                class="cs-icon"
-                src={service.src}
-                decoding="async"
-                alt="icon"
-                width="40"
-                height="40"
-                aria-hidden="true"
-              />
-            </picture>
+        services.map((service, index) =>
+          index < 4 ? (
+            <li class="cs-item" data-key={service.id}>
+              <picture class="cs-icon-picture">
+                <img
+                  class="cs-icon"
+                  src={service.icon}
+                  decoding="async"
+                  alt="icon"
+                  width="40"
+                  height="40"
+                  aria-hidden="true"
+                />
+              </picture>
 
-            <div class="cs-text-group">
-              <h3 class="cs-h3">{service.name}</h3>
-              <p class="cs-item-text">{service.description}</p>
-            </div>
-          </li>
-        ))
+              <div class="cs-text-group">
+                <h3 class="cs-h3">{service.name}</h3>
+                <p class="cs-item-text">{service.description}</p>
+              </div>
+            </li>
+          ) : null
+        )
       }
     </ul>
   </div>
