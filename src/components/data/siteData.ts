@@ -92,26 +92,31 @@ export const SITE_DATA = {
   testimonials: [
     {
       name: "Rajesh Kumar",
+      heading: "Affordable and Skilled",
       text: "Excellent service! Fixed my AC within an hour. Highly recommended.",
       rating: 5,
     },
     {
       name: "Priya Singh",
-      text: "Very professional and affordable. Great customer support.",
+      heading: "Loved the service!",
+      text: "Great experience with Cool Care Patna. My washing machine works perfectly now. Very professional and affordable. Great customer support.",
       rating: 5,
     },
     {
       name: "Amit Verma",
+      heading: "Quick and effective repair",
       text: "Quick response and effective repair. My refrigerator is working like new!",
       rating: 4,
     },
     {
       name: "Sneha Gupta",
+      heading: "Reliable and Trustworthy",
       text: "Reliable and trustworthy service for home appliances.",
       rating: 5,
     },
     {
       name: "Vikas Yadav",
+      heading: "Good value for money",
       text: "Affordable prices and skilled technicians. Will use their service again.",
       rating: 4,
     }
