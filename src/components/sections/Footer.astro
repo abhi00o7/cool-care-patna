@@ -1,6 +1,8 @@
 ---
 import { SITE_DATA } from "../data/siteData.ts";
 const { services, business } = SITE_DATA;
+import { NAVIGATION_DATA } from "../data/navigationData.ts";
+const { navigationItems: navData } = NAVIGATION_DATA;
 ---
 
 <!-- ============================================ --><!--                   Footer                     --><!-- ============================================ -->
@@ -56,7 +58,7 @@ const { services, business } = SITE_DATA;
         {
           services.map((service) => (
             <li class="cs-li" data-key={service.id}>
-              <a class="cs-link" href="">
+              <a class="cs-link" href={navData.find(item => item.id === "services")?.href} >
                 {service.name}
               </a>
             </li>

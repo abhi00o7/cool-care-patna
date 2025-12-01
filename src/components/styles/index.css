@@ -1,9 +1,9 @@
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   --primary: #179edb;
-  --primaryLight: #76D6FF;
-  --secondary: #A8E5FF;
-  --secondaryLight: #A8E5FF;
+  --primaryLight: #76d6ff;
+  --secondary: #a8e5ff;
+  --secondaryLight: #a8e5ff;
   --headerColor: #004969;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
@@ -15,6 +15,33 @@
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll padding for sticky header */
+@supports (scroll-padding-top: 100px) {
+  html {
+    /* Adjust based on header height */
+    scroll-padding-top: 80px;
+  }
+}
+
+/* Highlight active section */
+section:target {
+  animation: highlight 0.5s ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(37, 99, 235, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
 }
 
 body {
