@@ -1,10 +1,10 @@
 ---
 import { SITE_DATA } from "../data/siteData.ts";
-const { services, business } = SITE_DATA;
+const { business } = SITE_DATA;
 ---
 
 <!-- ============================================ --><!--                   Contact                    --><!-- ============================================ -->
-<section id="contact-1750">
+<section id="contact">
   <div class="cs-container">
     <div class="cs-form-group">
       <div class="cs-content">
@@ -64,20 +64,24 @@ const { services, business } = SITE_DATA;
     <div class="cs-info-group">
       <div class="cs-info">
         <span class="cs-topper">Location</span>
-        <span class="cs-detail"
-          >{business.address}</span
-        >
+        <span class="cs-detail">{business.address}</span>
       </div>
       <div class="cs-info">
         <span class="cs-topper">Working Hours</span>
-        <span class="cs-detail">Weekdays: {business.workingHours.weekdays}</span>
-        <span class="cs-detail">Saturday: {business.workingHours.saturday}</span>
+        <span class="cs-detail">Weekdays: {business.workingHours.weekdays}</span
+        >
+        <span class="cs-detail">Saturday: {business.workingHours.saturday}</span
+        >
         <span class="cs-detail">Sunday: {business.workingHours.sunday}</span>
       </div>
       <div class="cs-info">
         <span class="cs-topper">Contact</span>
-        <span class="cs-detail">M: {business.phone}</span>
-        <span class="cs-detail">E: {business.email}</span>
+        <span class="cs-detail"
+          ><a href={`tel:${business.phone}`}>M: {business.phone}</a></span
+        >
+        <span class="cs-detail"
+          ><a href={`mailto:${business.email}`}>E: {business.email}</a></span
+        >
       </div>
     </div>
   </div>
@@ -161,13 +165,28 @@ const { services, business } = SITE_DATA;
 
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
-    #contact-1750 {
+    #contact
+      > div.cs-container
+      > div.cs-info-group
+      > div:nth-child(3)
+      > span:nth-child(3)
+      > a,
+    #contact
+      > div.cs-container
+      > div.cs-info-group
+      > div:nth-child(3)
+      > span:nth-child(2)
+      > a {
+      text-decoration: none;
+      color: inherit;
+    }
+    #contact {
       padding: var(--sectionPadding);
       overflow: hidden;
       position: relative;
       z-index: 1;
     }
-    #contact-1750 .cs-container {
+    #contact .cs-container {
       width: 100%;
       /* changes to 1024 on desktop */
       max-width: 44rem;
@@ -180,7 +199,7 @@ const { services, business } = SITE_DATA;
       /* 48px - 64px */
       gap: clamp(3rem, 5vw, 4rem);
     }
-    #contact-1750 .cs-content {
+    #contact .cs-content {
       /* set text align to center if content needs to be centrally aligned */
       text-align: left;
       width: 100%;
@@ -189,7 +208,7 @@ const { services, business } = SITE_DATA;
       /* aligns content to the left, set to center to centrally align */
       align-items: flex-start;
     }
-    #contact-1750 .cs-form-group {
+    #contact .cs-form-group {
       /* set text align to left if content needs to be left aligned */
       text-align: center;
       width: 100%;
@@ -202,10 +221,10 @@ const { services, business } = SITE_DATA;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
     }
-    #contact-1750 .cs-title {
+    #contact .cs-title {
       margin: 0 0 1.5rem;
     }
-    #contact-1750 .cs-form {
+    #contact .cs-form {
       width: 100%;
       /* prevents flexbox from affecting height and width */
       box-sizing: border-box;
@@ -214,7 +233,7 @@ const { services, business } = SITE_DATA;
       grid-template-columns: repeat(12, 1fr);
       gap: 1rem;
     }
-    #contact-1750 .cs-label {
+    #contact .cs-label {
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.2em;
@@ -225,7 +244,7 @@ const { services, business } = SITE_DATA;
       grid-column: span 12;
       gap: 0.5rem;
     }
-    #contact-1750 .cs-input {
+    #contact .cs-input {
       font-size: 1rem;
       width: 100%;
       /* 46px - 56px */
@@ -238,15 +257,15 @@ const { services, business } = SITE_DATA;
       color: var(--headerColor);
       border: none;
     }
-    #contact-1750 .cs-input::placeholder {
+    #contact .cs-input::placeholder {
       color: var(--bodyTextColor);
     }
-    #contact-1750 .cs-textarea {
+    #contact .cs-textarea {
       font-family: inherit;
       min-height: 7.5rem;
       padding-top: 1.5rem;
     }
-    #contact-1750 .cs-button-solid {
+    #contact .cs-button-solid {
       font-size: 1rem;
       font-weight: 700;
       /* 46px - 56px */
@@ -267,7 +286,7 @@ const { services, business } = SITE_DATA;
       z-index: 1;
       transition: color 0.3s;
     }
-    #contact-1750 .cs-button-solid:before {
+    #contact .cs-button-solid:before {
       content: "";
       width: 0%;
       height: 100%;
@@ -279,34 +298,34 @@ const { services, business } = SITE_DATA;
       z-index: -1;
       transition: width 0.3s;
     }
-    #contact-1750 .cs-button-solid:hover {
+    #contact .cs-button-solid:hover {
       color: #fff;
     }
-    #contact-1750 .cs-button-solid:hover:before {
+    #contact .cs-button-solid:hover:before {
       width: 100%;
     }
-    #contact-1750 .cs-submit {
+    #contact .cs-submit {
       margin: 1rem 0 0;
       color: var(--bodyTextColorWhite);
       grid-column: span 12;
       justify-self: flex-start;
     }
-    #contact-1750 .cs-submit:hover {
+    #contact .cs-submit:hover {
       cursor: pointer;
     }
-    #contact-1750 .cs-info-group {
+    #contact .cs-info-group {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-    #contact-1750 .cs-detail {
+    #contact .cs-detail {
       font-size: 1.25rem;
       font-weight: 700;
       line-height: 1.2em;
       color: var(--bodyTextColor);
       display: block;
     }
-    #contact-1750 .cs-picture-group {
+    #contact .cs-picture-group {
       width: 110%;
       height: 100vw;
       /* removed at desktop */
@@ -317,12 +336,12 @@ const { services, business } = SITE_DATA;
       left: 50%;
       transform: translateX(-50%);
     }
-    #contact-1750 .cs-iframe {
+    #contact .cs-iframe {
       width: 100%;
       height: 100%;
       display: block;
     }
-    #contact-1750 .cs-graphic {
+    #contact .cs-graphic {
       width: 100%;
       min-width: 80rem;
       height: auto;
@@ -332,48 +351,48 @@ const { services, business } = SITE_DATA;
       z-index: 0;
       transform: translateX(-50%);
     }
-    #contact-1750 .cs-top {
+    #contact .cs-top {
       top: 0;
     }
-    #contact-1750 .cs-left {
+    #contact .cs-left {
       left: 4%;
       transform: rotate(270deg);
       transform-origin: left;
     }
-    #contact-1750 .cs-bottom {
+    #contact .cs-bottom {
       bottom: 0;
       left: 0;
       transform: rotateX(180deg);
     }
-    #contact-1750 .cs-dark {
+    #contact .cs-dark {
       display: none;
     }
   }
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
-    #contact-1750 {
+    #contact {
       /* using flex: 1 on both group elements to ensure they're both the same width */
     }
-    #contact-1750 .cs-container {
+    #contact .cs-container {
       flex-direction: row;
       align-items: center;
     }
-    #contact-1750 .cs-form-group {
+    #contact .cs-form-group {
       flex: 1;
     }
-    #contact-1750 .cs-info-group {
+    #contact .cs-info-group {
       flex: 1;
     }
   }
   /* Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
-    #contact-1750 .cs-container {
+    #contact .cs-container {
       width: 65%;
       max-width: 64rem;
       margin: 0 auto 0 0;
       padding: 2.5rem 1.5rem;
     }
-    #contact-1750 .cs-picture-group {
+    #contact .cs-picture-group {
       width: 90%;
       height: 100%;
       max-height: 100%;
@@ -385,51 +404,52 @@ const { services, business } = SITE_DATA;
       z-index: -1;
       transform: none;
     }
-    #contact-1750 .cs-picture-group {
+    #contact .cs-picture-group {
       margin-left: -12.75rem;
       left: 50%;
     }
   }
   /* Large Desktop - 1300px */
   @media only screen and (min-width: 81.25rem) {
-    #contact-1750 .cs-label:nth-of-type(2),
-    #contact-1750 .cs-label:nth-of-type(3) {
+    #contact .cs-label:nth-of-type(2),
+    #contact .cs-label:nth-of-type(3) {
       grid-column: span 6;
     }
   }
   /* Largest Desktop - 1920px */
   @media only screen and (min-width: 120rem) {
-    #contact-1750 {
+    #contact {
       padding-top: 7vw;
       padding-bottom: 9vw;
     }
-    #contact-1750 .cs-container {
+    #contact .cs-container {
       margin: 0 auto;
       transform: translateX(-22rem);
     }
   }
   /* Dark Mode */
   @media only screen and (min-width: 0rem) {
-    body.dark-mode #contact-1750 .cs-container {
+    
+    body.dark-mode #contact .cs-container {
       background-color: var(--dark);
     }
-    body.dark-mode #contact-1750 .cs-label,
-    body.dark-mode #contact-1750 .cs-detail {
+    body.dark-mode #contact .cs-label,
+    body.dark-mode #contact .cs-detail {
       color: var(--bodyTextColorWhite);
     }
-    body.dark-mode #contact-1750 .cs-input {
+    body.dark-mode #contact .cs-input {
       background-color: var(--medium);
       color: var(--bodyTextColorWhite);
       border-color: rgba(255, 255, 255, 0.2);
     }
-    body.dark-mode #contact-1750 .cs-input::placeholder {
+    body.dark-mode #contact .cs-input::placeholder {
       color: #fff;
       opacity: 0.5;
     }
-    body.dark-mode #contact-1750 .cs-light {
+    body.dark-mode #contact .cs-light {
       display: none;
     }
-    body.dark-mode #contact-1750 .cs-dark {
+    body.dark-mode #contact .cs-dark {
       display: block;
     }
   }
