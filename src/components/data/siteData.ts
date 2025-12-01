@@ -2,7 +2,7 @@ export const SITE_DATA = {
   business: {
     name: "Cool Care Patna",
     proprietor: "Mr. Amit Kumar",
-    tagline: "Expert Repair Services for AC & Home Appliances",
+    tagline: "Expert Repair Services for AC & Home Appliances in Patna",
     taglineHindi: 'सभी अप्लायंसेस, सभी समाधान',
     taglineEnglish: 'All Appliances. All Solutions.',
     description: "Professional repair and maintenance services for air conditioners, refrigerators, washing machines, and other home appliances in Patna.",
@@ -13,7 +13,7 @@ export const SITE_DATA = {
     logoWide: "/images/logos/logo-ccp.png",
     phone: "+91 8340 647 700",
     whatsapp: "+91 8340 647 700",
-    email: "info@coolcarepatna.com",
+    email: "amit.kj16@gmail.com",
     address: "Sipara, Matkhan, Patna, Bihar 800020",
     googleMapsLink: "https://maps.app.goo.gl/cHYFf9NASapePctb8",
     workingHours: {
@@ -28,13 +28,13 @@ export const SITE_DATA = {
       name: "AC Repair & Maintenance",
       description: "Professional repair, servicing, and maintenance for all AC brands",
       src: "/images/services/air-conditioning.png",
-      price: 499,
+      price: 399,
       icon: "/images/services/cold.svg",
     },
     {
       id: 2,
       name: "Gas Refill",
-      description: "R22 and R410A gas refill for air conditioners",
+      description: "R22,R32 and R410A gas refill for air conditioners",
       src: "/images/services/refill-r22-air-conditioner.png",
       price: 2499,
       icon: "/images/services/gas-refill.svg",
