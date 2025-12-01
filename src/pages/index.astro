@@ -10,12 +10,17 @@ import ContactForm from "../components/sections/ContactForm.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import ButtonWhatsapp from "../components/ui/ButtonWhatsapp.astro";
 import ButtonPhone from "../components/ui/ButtonPhone.astro";
+import { SITE_DATA } from "../components/data/siteData.ts";
+const { business } = SITE_DATA;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="CoolCare - Your trusted cooling solutions in Patna" />
+    <meta
+      name="description"
+      content={`CoolCarePatna Expert AC, washing machine, refrigerator & water heater repair in Patna. NSDC certified technician. Same-day service, 30-day warranty. Call ${business.phone}`}
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +31,10 @@ import ButtonPhone from "../components/ui/ButtonPhone.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/src/components/styles/index.css" />
-    <title>CoolCare</title>
+    <title>
+      AC, Washing Machine & Refrigerator Repair in Patna | Same-Day Service |
+      Cool Care Patna
+    </title>
   </head>
   <body>
     <!-- <h1>Cool care patna</h1> -->
