@@ -8,7 +8,7 @@ const { services, business } = SITE_DATA;
   <div class="cs-container">
     <!--Nav Logo-->
     <!--Logo is turned white in the css with a filter on dark mode-->
-    <a href="" class="cs-logo" aria-label="back to home">
+    <a href={`tel:${business.phone}`} class="cs-logo" aria-label="back to home">
       <img
         src={business.logoWide}
         alt="logo"
@@ -386,7 +386,7 @@ const { services, business } = SITE_DATA;
     #cs-navigation .cs-line {
       width: 100%;
       height: 2px;
-      background-color: #fafbfc;
+      background-color: #fafcfa;
       border-radius: 2px;
       position: absolute;
       left: 50%;
@@ -547,7 +547,7 @@ const { services, business } = SITE_DATA;
       filter: grayscale(1) brightness(1000%);
     }
     body.dark-mode #cs-navigation .cs-line {
-      background-color: #fff;
+      background-color: var(--headerColor);
     }
     body.dark-mode #cs-navigation .cs-ul-wrapper {
       background-color: var(--medium);
@@ -804,7 +804,7 @@ const { services, business } = SITE_DATA;
     }
     #cs-navigation .cs-logo img {
       width: auto;
-      height: 100%;
+      height: 150%;
       /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
       object-fit: contain;
     }
