@@ -1,5 +1,8 @@
 name = "cool-care-patna"
+main = "./dist/_worker.js/index.js"
 compatibility_date = "2025-12-01"
+compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
