@@ -7,7 +7,7 @@ const { business } = SITE_DATA;
   href={`tel:${business.phone}`}
   target="_blank"
   rel="noopener noreferrer"
-  class="inbdigital__wha-float"
+  class="phone_button"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const { business } = SITE_DATA;
 
   <!-- <svg
     xmlns="https://www.w3.org/2000/svg"
-    class="inbdigital__wha-float_icon"
+    class="phone_button_icon"
     width="30"
     height="30"
     fill="#fff"
@@ -60,7 +60,7 @@ const { business } = SITE_DATA;
 </a>
 
 <style>
-  .inbdigital__wha-float {
+  .phone_button {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -78,7 +78,7 @@ const { business } = SITE_DATA;
     cursor: pointer;
   }
 
-  .inbdigital__wha-float::after {
+  .phone_button::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -106,7 +106,7 @@ const { business } = SITE_DATA;
     }
   }
 
-  .inbdigital__wha-float .inbdigital__wha-float_icon {
+  .phone_button .phone_button_icon {
     margin: auto;
   }
 </style>
