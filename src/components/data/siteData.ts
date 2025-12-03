@@ -17,7 +17,8 @@ export const SITE_DATA = {
     instagram: "https://www.instagram.com/amit_ac_patna/",
     twitter: "https://x.com/Amitkum32429506",
     youtube: "https://www.youtube.com/@amitacpatna",
-    email: "amit.kj16@gmail.com",
+    email: "coolcarepatnaofficial@gmail.com",
+    secureEmail: "2cae6e7b4baf7a4eccc6c58a479704f2",
     address: "Sipara, Matkhan, Patna, Bihar 800020",
     googleMapsLink: "https://maps.app.goo.gl/cHYFf9NASapePctb8",
     workingHours: {

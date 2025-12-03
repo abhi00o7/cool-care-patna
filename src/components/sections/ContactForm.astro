@@ -12,7 +12,13 @@ const { business } = SITE_DATA;
         <h2 class="cs-title">Contact Us</h2>
       </div>
       <!--Form-->
-      <form class="cs-form" id="cs-form-1750" name="Contact Form" method="post">
+      <form
+        class="cs-form"
+        id="cs-form-1750"
+        name="Contact Form"
+        method="post"
+        action={`https://formsubmit.co/${business.secureEmail}`}
+      >
         <label class="cs-label">
           Name *
           <input
@@ -51,7 +57,7 @@ const { business } = SITE_DATA;
           <textarea
             class="cs-input cs-textarea"
             required
-            name="Message"
+            name="message"
             id="message-1750"
             placeholder="Hello, I am interested..."></textarea>
         </label>
@@ -89,6 +95,8 @@ const { business } = SITE_DATA;
   <div class="cs-picture-group">
     <!--Replace with your iframe for your google business profile-->
     <iframe
+      id="google-maps-patna"
+      title="cool care patna location"
       class="cs-iframe"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57566.46255639066!2d85.10184354946284!3d25.608109077628676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f29937c52d4f05%3A0x831a0e05f607b270!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1764535848388!5m2!1sen!2sin"
       width="600"
@@ -96,7 +104,10 @@ const { business } = SITE_DATA;
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      referrerpolicy="no-referrer-when-downgrade"
+    >
+      Get Directions</iframe
+    >
 
     <!--All three graphics use the same src, which is transformed in the CSS. If you want to replace the graphic with another one, simply replace all the src's with the same URL and watch the magic happen!-->
     <img
@@ -429,7 +440,6 @@ const { business } = SITE_DATA;
   }
   /* Dark Mode */
   @media only screen and (min-width: 0rem) {
-    
     body.dark-mode #contact .cs-container {
       background-color: var(--dark);
     }
