@@ -1,7 +1,7 @@
 {
   "name": "cool-care-patna",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev docs --host 0.0.0.0",
     "build": "astro build",
@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
-    "astro": "^5.16.3",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.4",
     "astro-tunnel": "^0.1.8"
   },
   "devDependencies": {
-    "wrangler": "^4.51.0"
+    "wrangler": "^4.53.0"
   }
 }

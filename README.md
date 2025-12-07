@@ -1,7 +1,7 @@
 # Cool Care Patna - AC, Washing Machine & Refrigerator Repair Services
 Welcome to the Cool Care Patna project! This repository contains the source code for the Cool Care Patna website, which offers repair services for air conditioners, washing machines, and refrigerators in Patna.
 
-## 📄 Overvie
+## 📄 Overview
 This project is built using [Astro](https://astro.build/), a modern static site builder that allows you to create fast, optimized websites with ease. The website features various sections, including service offerings, pricing, testimonials, and a contact form.
 
 
@@ -110,13 +110,6 @@ This project is built using [Astro](https://astro.build/), a modern static site 
 ├── tsconfig.json
 └── wrangler.jsonc
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

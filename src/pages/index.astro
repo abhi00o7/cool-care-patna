@@ -10,12 +10,13 @@ import ContactForm from "../components/sections/ContactForm.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import ButtonWhatsapp from "../components/ui/ButtonWhatsapp.astro";
 import ButtonPhone from "../components/ui/ButtonPhone.astro";
-import { SITE_DATA } from "../components/data/siteData.ts";
+import { SITE_DATA } from "../components/data/siteData";
 const { business } = SITE_DATA;
 ---
 
 <html lang="en">
   <head>
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta charset="utf-8" />
     <meta
       name="description"
