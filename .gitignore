@@ -24,3 +24,10 @@ pnpm-debug.log*
 .idea/
 # vscode setting folder
 .vscode/
+# local env files
+.env.local
+.env.*.local
+# astro cache
+.astro/
+# wrangler kit build output
+.wrangler/
